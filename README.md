@@ -152,25 +152,21 @@ Usage
 ```
 
 ### Softkeys
-* Softkey with text in the middle
+* Softkeys with text in the middle
 ```html
-<div class="separator">
-  <div class="softkeys">
-    <div class="softkey softkey-left">left key</div>
-    <div class="softkey softkey-center">select</div>
-    <div class="softkey softkey-right">right key</div>
-  </div>
+<div class="softkeys">
+  <div class="softkey softkey-left">left key</div>
+  <div class="softkey softkey-center">select</div>
+  <div class="softkey softkey-right">right key</div>
 </div>
 ```
 
-* Softkey with icon in the middle
+* Softkeys with icon in the middle
 ```html
-<div class="separator">
-  <div class="softkeys-icon">
-    <div class="softkey softkey-left">left key</div>
-    <div class="softkey softkey-center"><!-- icon --></div>
-    <div class="softkey softkey-right">right key</div>
-  </div>
+<div class="softkeys-icon">
+  <div class="softkey softkey-left">left key</div>
+  <div class="softkey softkey-center"><!-- icon --></div>
+  <div class="softkey softkey-right">right key</div>
 </div>
 ```
 
