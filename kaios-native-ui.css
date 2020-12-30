@@ -4,6 +4,12 @@
 
     /* you can edit these variables */
 
+    /* change to 'none', if there are problems with capitalization */
+    --capitalization: capitalize;
+
+    /* change to 'auto', if you want scrolling */
+    --content-overflow: hidden;
+
     --app-background: #ffffff;
 
     --header-background: #320574;
@@ -90,12 +96,10 @@ html, body {
     background: var(--app-background);
     width: 100vw;
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
 }
 
 #content {
-    /* remove this if you want scrolling */
-    overflow: hidden;
+    overflow: var(--content-overflow);
     width: 100vw;
     height: calc(100% - 5.8rem)
 }
@@ -110,12 +114,9 @@ html, body {
     padding: 0 1rem 0 1rem;
     background: var(--header-background);
     color: var(--header-color);
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
-}
-
-#header::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 /* List item */
@@ -133,25 +134,25 @@ html, body {
 .list-item__text {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin: 0;
 }
 
 .list-item__text::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .list-item__subtext {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
 }
 
 .list-item__subtext::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 /* List item with an indicator */
@@ -169,25 +170,25 @@ html, body {
 .list-item-indicator__text {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin: 0;
 }
 
 .list-item-indicator__text::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .list-item-indicator__subtext {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
 }
 
 .list-item-indicator__subtext::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .list-item-indicator__indicator {
@@ -213,11 +214,11 @@ html, body {
     line-height: 2.4rem;
     height: 2.4rem;
     padding: 0 1rem 0 1rem;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     background: var(--separator-background);
     color: var(--separator-color);
-    text-transform: capitalize;
+    text-transform: var(--capitalization);
 }
 
 /* List item with radio */
@@ -235,25 +236,25 @@ html, body {
 .radio-container__text {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin: 0;
 }
 
 .radio-container__text::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .radio-container__subtext {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
 }
 
 .radio-container__subtext::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .radio-container__radio {
@@ -282,25 +283,25 @@ html, body {
 .checkbox-container__text {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin: 0;
 }
 
 .checkbox-container__text::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .checkbox-container__subtext {
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
 }
 
 .checkbox-container__subtext::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .checkbox-container__checkbox {
@@ -325,14 +326,14 @@ html, body {
 
 .progress-container__label {
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin: 0;
     display: block;
 }
 
 .progress-container__label::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .progress-container__progress {
@@ -388,7 +389,7 @@ html, body {
 
 .slider-container__text {
     overflow: hidden;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     margin: 0;
     display: block;
@@ -396,12 +397,12 @@ html, body {
 }
 
 .slider-container__text::first-letter {
-    text-transform: uppercase;
+    text-transform: var(--capitalization);
 }
 
 .slider-container__subtext {
     overflow: hidden;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     margin: 0;
     display: flex;
@@ -454,11 +455,11 @@ html, body {
     margin-top: 1rem;
     border: none;
     outline: none;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     background: var(--button-background);
     color: var(--button-color);
-    text-transform: capitalize;
+    text-transform: var(--capitalization);
 }
 
 .button-container__button:focus {
@@ -476,7 +477,7 @@ html, body {
     padding: 0 .3rem 0 .3rem;
     margin-top: .5rem;
     width: 100%;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 400;
     outline: none;
     box-sizing: border-box;
@@ -492,10 +493,10 @@ html, body {
 }
 
 .input-container__label, .textarea-container__label {
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     display: block;
-    text-transform: capitalize;
+    text-transform: var(--capitalization);
 }
 
 /* Software Keys */
@@ -503,13 +504,11 @@ html, body {
 .softkeys, .softkeys-icon {
     box-sizing: border-box;
     padding: .5rem;
-    column-gap: .5;
+    column-gap: .5rem;
     /* grid-gap is an old way of saying column-gap */
     grid-gap: .5rem;
     display: grid;
     height: 3rem;
-    bottom: 0;
-    position: relative;
     background: var(--softkeys-background);
     color: var(--softkeys-color);
 }
@@ -524,7 +523,7 @@ html, body {
     font-size: 1.4rem;
     font-weight: 600;
     text-align: start;
-    text-transform: capitalize;
+    text-transform: var(--capitalization);
 }
 
 .softkey-center {
@@ -538,7 +537,7 @@ html, body {
     font-size: 1.4rem;
     font-weight: 600;
     text-align: end;
-    text-transform: capitalize;
+    text-transform: var(--capitalization);
 }
 
 @media only screen and (orientation : portrait) {

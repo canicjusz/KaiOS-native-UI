@@ -33,13 +33,13 @@ Usage
 
 * List item with text only
 ```html
-<div class="list-item focusable" tabindex="1">
+<div class="list-item focusable" tabindex="0">
   <p class="list-item__text">
     single line list item
   </p>
 </div>
 
-<div class="list-item focusable" tabindex="1">
+<div class="list-item focusable" tabindex="0">
   <p class="list-item__text">list item</p>
   <p class="list-item__subtext">secondary List</p>
 </div>
@@ -47,14 +47,14 @@ Usage
 
 * List item with indicator
 ```html
-<div class="list-item-indicator focusable" tabindex="1">
+<div class="list-item-indicator focusable" tabindex="0">
   <p class="list-item-indicator__text">
     single line list item
   </p>
   <span class="list-item-indicator__indicator"></span>
 </div>
 
-<div class="list-item-indicator focusable" tabindex="1">
+<div class="list-item-indicator focusable" tabindex="0">
   <p class="list-item-indicator__text">
     two-lines list item
   </p>
@@ -74,7 +74,7 @@ Usage
   <p class="checkbox-container__subtext">
     secondary List
   </p>
-  <input type="checkbox" tabindex="1" class="checkbox-container__checkbox focusable">
+  <input type="checkbox" tabindex="0" class="checkbox-container__checkbox focusable">
 </div>
 ```
 
@@ -87,7 +87,7 @@ Usage
   <p class="radio-container__subtext">
     secondary List
   </p>
-  <input type="radio" tabindex="1" class="radio-container__radio focusable">
+  <input type="radio" tabindex="0" class="radio-container__radio focusable">
 </div>
 ```
 
@@ -100,13 +100,13 @@ Usage
   <p class="slider-container__subtext">
     5/15
   </p>
-  <input type="range" tabindex="1" min="1" max="15" value="5" class="slider-container__slider focusable">
+  <input type="range" tabindex="0" min="1" max="15" value="5" class="slider-container__slider focusable">
 </div>
 ```
 
 * List item with progress bar
 ```html
-<div class="progress-container" tabindex="1">
+<div class="progress-container" tabindex="0">
   <label class="progress-container__label">
     downloading
   </label>
@@ -120,7 +120,7 @@ Usage
 ```html
 <div class="input-container">
   <label class="input-container__label">label text</label>
-  <input type="text" tabindex="1" class="input-container__input focusable">
+  <input type="text" tabindex="0" class="input-container__input focusable">
 </div>
 ```
 
@@ -128,17 +128,17 @@ Usage
 ```html
 <div class="textarea-container">
   <label class="textarea-container__label">label text</label>
-  <textarea tabindex="1" class="textarea-container__textarea focusable"></textarea>
+  <textarea tabindex="0" class="textarea-container__textarea focusable"></textarea>
 </div>
 ```
 
 ### Buttons
 ```html
 <div class="button-container">
-  <button tabindex="1" class="button-container__button focusable">
+  <button tabindex="0" class="button-container__button focusable">
     sign in
   </button>
-  <button tabindex="1" class="button-container__button focusable">
+  <button tabindex="0" class="button-container__button focusable">
     register
   </button>
 </div>
@@ -147,9 +147,32 @@ Usage
 ### Separator
 ```html
 <div class="separator">
-    separator
+  separator
 </div>
 ```
 
-### Color changing
+### Softkeys
+* Softkey with text in the middle
+```html
+<div class="separator">
+  <div class="softkeys">
+    <div class="softkey softkey-left">left key</div>
+    <div class="softkey softkey-center">select</div>
+    <div class="softkey softkey-right">right key</div>
+  </div>
+</div>
+```
+
+* Softkey with icon in the middle
+```html
+<div class="separator">
+  <div class="softkeys-icon">
+    <div class="softkey softkey-left">left key</div>
+    <div class="softkey softkey-center"><!-- icon --></div>
+    <div class="softkey softkey-right">right key</div>
+  </div>
+</div>
+```
+
+### Color, textarea height, scroll, capitalization changing
 Go to css file and edit values in ```:root```
