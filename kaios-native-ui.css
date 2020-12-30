@@ -1,0 +1,589 @@
+/* imports font */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("Open_Sans/OpenSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("Open_Sans/OpenSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("Open_Sans/OpenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+
+    /* you can edit these variables */
+
+    --app-background: #ffffff;
+
+    --header-background: #320574;
+    --header-color: #ffffff;
+
+    --softkeys-background: #CCCCCC;
+    --softkeys-color: #323232;
+
+    --item-background: #ffffff;
+    --item-text-color: #323232;
+    --item-subtext-color: #6A6A6A;
+
+    --item-focused-background: #873EFF;
+    --item-focused-text-color: #ffffff;
+    --item-focused-subtext-color: #ffffff;
+
+    --arrow-color: #000000;
+
+    --button-background: #CCCCCC;
+    --button-color: #323232;
+
+    --button-background-focused: #873EFF;
+    --button-color-focused: #ffffff;
+
+    --textarea-height: 5rem;
+
+    --slider-color: #AAAAAA;
+    --slider-color-selected: #873EFF;
+
+    --slider-focused-color: #AAAAAA;
+    --slider-focused-selected: #ffffff;
+
+    --progress-color: #AAAAAA;
+    --progress-color-selected: #873EFF;
+
+    --progress-focused-color: #AAAAAA;
+    --progress-focused-selected: #ffffff;
+
+    --separator-background: #E6E6E6;
+    --separator-color: #6A6A6A;
+}
+
+/* change this to any class your spatial navigation library uses. .dpad-navigation for gauntface/dpad-navigation,.navigable for amanboss9/naviboard.*/
+.focusable:focus {
+    outline: none;
+}
+
+/* color when not focused */
+
+.slider-container, .list-item-indicator, .list-item, .checkbox-container, .radio-container, .button-container, .input-container, .textarea-container, .progress-container {
+    background: var(--item-background);
+}
+
+.slider-container__text, .list-item-indicator__text, .list-item__text, .checkbox-container__text, .radio-container__text, .progress-container__label {
+    color: var(--item-text-color);
+}
+
+.slider-container__subtext, .list-item-indicator__subtext, .list-item__subtext, .checkbox-container__subtext, .radio-container__subtext, .input-container__label, .textarea-container__label {
+    color: var(--item-subtext-color);
+}
+
+/* color when focused */
+
+.selected, .list-item:focus , .list-item-indicator:focus, .progress-container:focus {
+    background: var(--item-focused-background);
+}
+
+.progress-container:focus > .progress-container__label, .selected > .slider-container__text, .list-item-indicator:focus > .list-item-indicator__text, .list-item:focus > .list-item__text, .selected > .checkbox-container__text, .selected > .radio-container__text {
+    color: var(--item-focused-text-color);
+}
+
+.selected > .slider-container__subtext, .list-item-indicator:focus > .list-item-indicator__subtext, .list-item:focus > .list-item__subtext, .selected > .checkbox-container__subtext, .selected > .radio-container__subtext, .selected > .input-container__label, .selected > .textarea-container__label {
+    color: var(--item-focused-subtext-color);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#app {
+    background: var(--app-background);
+    width: 100vw;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#content {
+    /* remove this if you want scrolling */
+    overflow: hidden;
+    width: 100vw;
+    height: calc(100% - 5.8rem)
+}
+
+/* Header */
+
+#header {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2.8rem;
+    height: 2.8rem;
+    padding: 0 1rem 0 1rem;
+    background: var(--header-background);
+    color: var(--header-color);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+#header::first-letter {
+    text-transform: uppercase;
+}
+
+/* List item */
+
+.list-item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-item__text {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.list-item__text::first-letter {
+    text-transform: uppercase;
+}
+
+.list-item__subtext {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.list-item__subtext::first-letter {
+    text-transform: uppercase;
+}
+
+/* List item with an indicator */
+
+.list-item-indicator {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1rem 3rem 1rem 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list-item-indicator__text {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.list-item-indicator__text::first-letter {
+    text-transform: uppercase;
+}
+
+.list-item-indicator__subtext {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.list-item-indicator__subtext::first-letter {
+    text-transform: uppercase;
+}
+
+.list-item-indicator__indicator {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    right: 1.5rem;
+    border: solid var(--item-subtext-color);
+    border-width: 0 .2rem .2rem 0;
+    display: inline-block;
+    transform: rotate(-45deg) translateY(-50%);
+    top:50%;
+}
+
+.list-item-indicator:focus > .list-item-indicator__indicator {
+    border-color: var(--item-focused-subtext-color);
+}
+
+/* Separator */
+
+.separator {
+    vertical-align: middle;
+    line-height: 2.4rem;
+    height: 2.4rem;
+    padding: 0 1rem 0 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    background: var(--separator-background);
+    color: var(--separator-color);
+    text-transform: capitalize;
+}
+
+/* List item with radio */
+
+.radio-container {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1rem 3rem 1rem 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.radio-container__text {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.radio-container__text::first-letter {
+    text-transform: uppercase;
+}
+
+.radio-container__subtext {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.radio-container__subtext::first-letter {
+    text-transform: uppercase;
+}
+
+.radio-container__radio {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    right: .5rem;
+    top:50%;
+    transform: translateY(-50%);
+    border-width: 0 .2rem .2rem 0;
+    display: inline-block;
+}
+
+/* List item with checkbox */
+
+.checkbox-container {
+    position: relative;
+    box-sizing: border-box;
+    padding: 1rem 3rem 1rem 1rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.checkbox-container__text {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.checkbox-container__text::first-letter {
+    text-transform: uppercase;
+}
+
+.checkbox-container__subtext {
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.checkbox-container__subtext::first-letter {
+    text-transform: uppercase;
+}
+
+.checkbox-container__checkbox {
+  box-sizing: border-box;
+  height: 2rem;
+  width: 2rem;
+  top:50%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: .5rem;
+  border-width: 0 .2rem .2rem 0;
+  display: inline-block;
+}
+
+/* List item with progress bar */
+
+.progress-container {
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 6rem;
+}
+
+.progress-container__label {
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    display: block;
+}
+
+.progress-container__label::first-letter {
+    text-transform: uppercase;
+}
+
+.progress-container__progress {
+  -webkit-appearance: none;
+  margin: 1rem 0 0 0;
+  height: .5rem;
+  border: none;
+  border-radius: .5rem;
+  width: 100%;
+  grid-area: slider;
+  background: var(--progress-color);
+}
+
+.progress-container__progress::-moz-progress-bar {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    background: var(--progress-color-selected);
+    border-right: 0.3rem solid var(--item-background);
+    height: .5rem;
+}
+
+.progress-container:focus > .progress-container__progress {
+    background: var(--progress-focused-color);
+}
+
+.progress-container:focus > .progress-container__progress::-moz-progress-bar {
+    background: var(--progress-focused-selected);
+    border-right-color: var(--item-focused-background);
+}
+
+/* List item with slider */
+
+.slider-container {
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 6rem;
+    display: grid;
+    grid-template-areas:
+        "text text subtext"
+        "slider slider slider"
+    ;
+}
+
+.slider-container__slider {
+  -webkit-appearance: none;
+  margin: 1rem 0 0 0;
+  height: .5rem;
+  border-radius: .5rem;
+  width: 100%;
+  grid-area: slider;
+  background: var(--slider-color);
+}
+
+.slider-container__text {
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    display: block;
+    grid-area: text;
+}
+
+.slider-container__text::first-letter {
+    text-transform: uppercase;
+}
+
+.slider-container__subtext {
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    grid-area: subtext;
+}
+
+.slider-container__slider::-moz-range-thumb {
+    outline: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.3rem solid var(--item-background);
+    border-radius: 50%;
+    background: var(--slider-color-selected);
+}
+
+/* i have no idea how to remove this outline */
+.slider-container__slider::-moz-range-track, .slider-container__slider::-webkit-slider-runnable-track{
+    outline: none;
+}
+
+.slider-container__slider::-moz-range-progress {
+    background: var(--slider-color-selected);
+    height: .5rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.slider-container__slider:focus::-moz-range-thumb {
+    border: 0.3rem solid var(--item-focused-background);
+    background: var(--slider-focused-selected);
+}
+
+.slider-container__slider:focus::-moz-range-progress {
+    background: var(--slider-focused-selected);
+}
+
+/* Button */
+
+.button-container {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.button-container__button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.6rem;
+    margin-top: 1rem;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 400;
+    background: var(--button-background);
+    color: var(--button-color);
+    text-transform: capitalize;
+}
+
+.button-container__button:focus {
+    background: var(--button-background-focused);
+    color: var(--button-color-focused);
+}
+
+/* Input */
+
+.input-container, .textarea-container {
+    padding: 1rem;
+}
+
+.input-container__input, .textarea-container__textarea {
+    padding: 0 .3rem 0 .3rem;
+    margin-top: .5rem;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+}
+
+.input-container__input {
+    height: 3.6rem;
+}
+
+.textarea-container__textarea {
+    height: var(--textarea-height);
+}
+
+.input-container__label, .textarea-container__label {
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    text-transform: capitalize;
+}
+
+/* Software Keys */
+
+.softkeys, .softkeys-icon {
+    box-sizing: border-box;
+    padding: .5rem;
+    column-gap: .5;
+    /* grid-gap is an old way of saying column-gap */
+    grid-gap: .5rem;
+    display: grid;
+    height: 3rem;
+    bottom: 0;
+    position: relative;
+    background: var(--softkeys-background);
+    color: var(--softkeys-color);
+}
+
+.softkey {
+    overflow: hidden;
+    vertical-align: middle;
+    height: 2rem;
+}
+
+.softkey-left {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.softkey-center {
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.softkey-right {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: end;
+    text-transform: capitalize;
+}
+
+@media only screen and (orientation : portrait) {
+  .softkeys {
+      grid-template-columns: 7.2rem 7.6rem 7.2rem;
+  }
+}
+
+@media only screen and (orientation : portrait) {
+  .softkeys-icon {
+      grid-template-columns: 9.8rem 2.4rem 9.8rem;
+  }
+}
+
+@media screen and (orientation: landscape)  {
+  .softkeys {
+      grid-template-columns: 9.6rem 10.8rem 9.6rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .softkeys-icon {
+      grid-template-columns: 13.8rem 2.4rem 13.8rem;
+  }
+}

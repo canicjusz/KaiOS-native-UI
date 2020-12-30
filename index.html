@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kaios-native-ui.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header">header</div>
+        <div id="content">
+            <div class="list-item focusable" tabindex="1">
+                <p class="list-item__text">list item</p>
+                <p class="list-item__subtext">secondary List</p>
+            </div>
+            <div class="list-item focusable" tabindex="1">
+                <p class="list-item__text">
+                    single line list item
+                </p>
+            </div>
+            <div class="separator">
+                list item with next indicator
+            </div>
+            <div class="list-item-indicator focusable" tabindex="1">
+                <p class="list-item-indicator__text">
+                    single line list item
+                </p>
+                <span class="list-item-indicator__indicator"></span>
+            </div>
+            <div class="list-item-indicator focusable" tabindex="1">
+                <p class="list-item-indicator__text">
+                    two-lines list item
+                </p>
+                <p class="list-item-indicator__subtext">
+                    with next indicator
+                </p>
+                <span class="list-item-indicator__indicator"></span>
+            </div>
+            <div class="separator">
+                checkboxes and inputs
+            </div>
+            <div class="checkbox-container">
+                <p class="checkbox-container__text">
+                    checkbox list item
+                </p>
+                <p class="checkbox-container__subtext">
+                    secondary List
+                </p>
+                <input type="checkbox" tabindex="1" class="focusable checkbox-container__checkbox" ></input>
+            </div>
+            <div class="radio-container">
+                <p class="radio-container__text">
+                    radio button list item
+                </p>
+                <p class="radio-container__subtext">
+                    secondary List
+                </p>
+                <input type="radio" tabindex="1" class="focusable radio-container__radio" >
+            </div>
+            <div class="separator">
+                sliders and progress bars
+            </div>
+            <div class="slider-container">
+                <p class="slider-container__text">
+                    alarm
+                </p>
+                <p class="slider-container__subtext">
+                    5/15
+                </p>
+                <input type="range" tabindex="1" min="1" max="15" value="5" class="focusable slider-container__slider">
+            </div>
+            <div class="progress-container" tabindex="1">
+                <label class="progress-container__label">
+                    downloading
+                </label>
+                <progress class="focusable progress-container__progress" value="65" max="100"></progress>
+            </div>
+            <div class="separator">
+                buttons
+            </div>
+            <div class="button-container">
+                <button class="focusable button-container__button " tabindex="1">
+                    sign in
+                </button>
+                <button class="focusable button-container__button " tabindex="1">
+                    register
+                </button>
+            </div>
+            <div class="separator">
+                textareas and inputs
+            </div>
+            <div class="input-container">
+                <label class="input-container__label">label text</label>
+                <input type="text" tabindex="1" class="focusable input-container__input"></input>
+            </div>
+            <div class="textarea-container">
+                <label class="textarea-container__label">label text</label>
+                <textarea tabindex="1" class="focusable textarea-container__textarea"></textarea>
+            </div>
+        </div>
+        <div class="softkeys">
+            <div class="softkey softkey-left">left key</div>
+            <div class="softkey softkey-center">select</div>
+            <div class="softkey softkey-right">right key</div>
+        </div>
+    </div>
+    <script src="kaios-native-ui.js"></script>
+</body>
+</html>
