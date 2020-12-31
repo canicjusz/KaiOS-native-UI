@@ -172,3 +172,8 @@ Usage
 
 ### Color, textarea height, scroll, capitalization changing
 Go to css file and edit values in ```:root```
+
+License
+--------
+
+<a href="http://www.wtfpl.net/" target="_blank">WTFPL</a>
