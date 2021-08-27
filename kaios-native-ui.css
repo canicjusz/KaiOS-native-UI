@@ -8,7 +8,7 @@
   --capitalization: capitalize;
 
   /* change to 'auto', if you want scrolling */
-  --content-overflow: hidden;
+  --content-overflow: auto;
 
   --app-background: #ffffff;
 
@@ -144,8 +144,7 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
 }
@@ -165,6 +164,9 @@ body {
 /* Toast */
 
 .toast {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 3.6rem;
   width: 100%;
   font-size: 1.7rem;
@@ -173,9 +175,8 @@ body {
   color: var(--toast-color);
   text-align: center;
   vertical-align: middle;
-  position: absolute;
   transform: translateY(-3.6rem);
-  transition: transform 1s ease-in-out;
+  transition: transform .7s ease-in-out;
   z-index: 1;
   top: 0;
 }
@@ -653,12 +654,14 @@ body {
 
 .softkeys,
 .softkeys-icon {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   box-sizing: border-box;
   padding: 0.5rem;
-  column-gap: 0.5rem;
-  /* grid-gap is an old way of saying column-gap */
-  grid-gap: 0.5rem;
-  display: grid;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   height: 3rem;
   background: var(--softkeys-background);
   color: var(--softkeys-color);
@@ -689,28 +692,4 @@ body {
   font-weight: 600;
   text-align: end;
   text-transform: var(--capitalization);
-}
-
-@media only screen and (orientation: portrait) {
-  .softkeys {
-    grid-template-columns: 7.2rem 7.6rem 7.2rem;
-  }
-}
-
-@media only screen and (orientation: portrait) {
-  .softkeys-icon {
-    grid-template-columns: 9.8rem 2.4rem 9.8rem;
-  }
-}
-
-@media screen and (orientation: landscape) {
-  .softkeys {
-    grid-template-columns: 9.6rem 10.8rem 9.6rem;
-  }
-}
-
-@media screen and (orientation: landscape) {
-  .softkeys-icon {
-    grid-template-columns: 13.8rem 2.4rem 13.8rem;
-  }
 }
