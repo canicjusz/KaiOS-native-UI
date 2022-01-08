@@ -572,6 +572,7 @@ body {
 .slider-container__slider::-moz-range-progress {
   background: var(--slider-color-selected);
   height: 0.5rem;
+  border: .1rem solid var(--slider-color-selected);
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
