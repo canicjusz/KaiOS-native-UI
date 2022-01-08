@@ -529,6 +529,7 @@ body {
   width: 100%;
   grid-area: slider;
   background: var(--slider-color);
+  padding: 0;
 }
 
 .slider-container__slider::-moz-focus-outer {
