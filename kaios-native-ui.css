@@ -561,6 +561,10 @@ body {
   grid-area: subtext;
 }
 
+.slider-container__slider::-moz-range-track {
+	background: transparent;
+}
+
 .slider-container__slider::-moz-range-thumb {
   outline: none;
   width: 1.5rem;
