@@ -529,6 +529,7 @@ body {
   width: 100%;
   grid-area: slider;
   background: var(--slider-color);
+  border: none;
   padding: 0;
 }
 
@@ -572,7 +573,6 @@ body {
 .slider-container__slider::-moz-range-progress {
   background: var(--slider-color-selected);
   height: 0.5rem;
-  border: .1rem solid var(--slider-color-selected);
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
