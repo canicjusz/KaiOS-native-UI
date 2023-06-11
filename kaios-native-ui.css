@@ -526,6 +526,11 @@ body {
   height: 0.5rem;
 }
 
+.progress-container__progress--min::-moz-progress-bar,
+.progress-container__progress--max::-moz-progress-bar {
+  border-right: none;
+}
+
 .progress-container:focus > .progress-container__progress {
   background: var(--progress-focused-color);
 }

@@ -138,6 +138,8 @@ Note: you can change radio apperance in CSS, simply navigate to the `radio-conta
 </div>
 ```
 
+Note: make sure to add `progress-container__progress--min` class to the progress element upon reaching minimal value and `progress-container__progress--max` upon reaching maximal value. Otherwise the progress bar will not look as expected [#6](https://github.com/canicjusz/KaiOS-native-UI/issues/6).
+
 ### Inputs and textareas:
 
 - Input
