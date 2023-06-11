@@ -1,7 +1,5 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 522 512">
-   <path fill="black"
-d="M176 256q0 -33 23.5 -56.5t56.5 -23.5t56.5 23.5t23.5 56.5t-23.5 56.5t-56.5 23.5t-56.5 -23.5t-23.5 -56.5zM256 80q73 0 124.5 51.5t51.5 124.5t-51.5 124.5t-124.5 51.5t-124.5 -51.5t-51.5 -124.5t51.5 -124.5t124.5 -51.5zM256 392q56 0 96 -40t40 -96t-40 -96
-t-96 -40t-96 40t-40 96t40 96t96 40z" />
+  <clipPath id="radio" clipPathUnits="objectBoundingBox"><path d="M0.273,0.5 Q0.273,0.406,0.339,0.339 T0.5,0.273 T0.661,0.339 T0.727,0.5 T0.661,0.661 T0.5,0.727 T0.339,0.661 T0.273,0.5 M0.5,0 Q0.707,0,0.854,0.146 T1,0.5 T0.854,0.854 T0.5,1 T0.146,0.854 T0,0.5 T0.146,0.146 T0.5,0 M0.5,0.886 Q0.659,0.886,0.773,0.773 T0.886,0.5 T0.773,0.227 T0.5,0.114 T0.227,0.227 T0.114,0.5 T0.227,0.773 T0.5,0.886"></path></clipPath>
 </svg>

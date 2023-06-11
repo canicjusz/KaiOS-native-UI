@@ -388,8 +388,8 @@ body {
 .radio-container__radio,
 .checkbox-container__checkbox {
   box-sizing: border-box;
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
@@ -403,15 +403,28 @@ body {
   opacity: 0;
 }
 
+/* these pseudo-elements preload the icons, it prevents weird flicking. */
+.radio-container__radio::before {
+  content: "";
+  visibility: hidden;
+  clip-path: url("checkboxes-radios/radio-off-kaios-2.5.3.svg#radio");
+}
+
+.radio-container__radio::after {
+  content: "";
+  visibility: hidden;
+  clip-path: url("checkboxes-radios/radio-on-kaios-2.5.3.svg#radio");
+}
+
 .radio-container__input + .radio-container__radio {
   background: var(--radio-color);
-  /* you can change it to "checkboxes-radios/radio-off-kaios-2.5.svg" */
-  mask-image: url("checkboxes-radios/radio-off-kaios-2.5.3.svg");
+  /* you can change it to "checkboxes-radios/radio-off-kaios-2.5.svg". Remember change the clip-path url of the pseudo-elements! */
+  clip-path: url("checkboxes-radios/radio-off-kaios-2.5.3.svg#radio");
 }
 
 .radio-container__input:checked + .radio-container__radio {
-  /* you can change it to "checkboxes-radios/radio-on-kaios-2.5.svg" */
-  mask-image: url("checkboxes-radios/radio-on-kaios-2.5.3.svg");
+  /* you can change it to "checkboxes-radios/radio-on-kaios-2.5.svg". Remember change the clip-path url of the pseudo-elements! */
+  clip-path: url("checkboxes-radios/radio-on-kaios-2.5.3.svg#radio");
 }
 
 /* List item with checkbox */
@@ -450,15 +463,28 @@ body {
   text-transform: var(--capitalization);
 }
 
+/* these pseudo-elements preload the icons, it prevents weird flicking. */
+.checkbox-container__checkbox::before {
+  content: "";
+  visibility: hidden;
+  clip-path: url("checkboxes-radios/checkbox-off-kaios-2.5.3.svg#checkbox");
+}
+
+.checkbox-container__checkbox::after {
+  content: "";
+  visibility: hidden;
+  clip-path: url("checkboxes-radios/checkbox-on-kaios-2.5.3.svg#checkbox");
+}
+
 .checkbox-container__input + .checkbox-container__checkbox {
   background: var(--checkbox-color);
-  /* you can change it to "checkboxes-radios/checkbox-on-kaios-2.5.svg" */
-  mask-image: url("checkboxes-radios/checkbox-off-kaios-2.5.3.svg");
+  /* you can change it to "checkboxes-radios/checkbox-on-kaios-2.5.svg#checkbox". Remember change the clip-path url of the pseudo-elements! */
+  clip-path: url("checkboxes-radios/checkbox-off-kaios-2.5.3.svg#checkbox");
 }
 
 .checkbox-container__input:checked + .checkbox-container__checkbox {
-  /* you can change it to "checkboxes-radios/checkbox-on-kaios-2.5.svg" */
-  mask-image: url("checkboxes-radios/checkbox-on-kaios-2.5.3.svg");
+  /* you can change it to "checkboxes-radios/checkbox-on-kaios-2.5.svg#checkbox". Remember change the clip-path url of the pseudo-elements! */
+  clip-path: url("checkboxes-radios/checkbox-on-kaios-2.5.3.svg#checkbox");
 }
 
 /* List item with progress bar */

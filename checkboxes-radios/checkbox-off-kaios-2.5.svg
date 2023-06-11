@@ -1,6 +1,5 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 522 512">
-   <path fill="black"
-d="M256 80q95 0 135.5 40.5t40.5 135.5t-40 135.5t-136 40.5t-136 -40.5t-40 -135.5t40 -135.5t136 -40.5zM256 400q82 0 113 -31t31 -113t-31 -113t-113 -31t-113 31t-31 113t31 113t113 31z" />
+  <clipPath id="checkbox" clipPathUnits="objectBoundingBox"><path d="M0.5,0 Q0.77,0,0.885,0.115 T1,0.5 T0.886,0.885 T0.5,1 T0.114,0.885 T0,0.5 T0.114,0.115 T0.5,0 M0.5,0.909 Q0.733,0.909,0.821,0.821 T0.909,0.5 T0.821,0.179 T0.5,0.091 T0.179,0.179 T0.091,0.5 T0.179,0.821 T0.5,0.909"></path></clipPath>
 </svg>
